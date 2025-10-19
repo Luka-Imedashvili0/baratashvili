@@ -1,71 +1,104 @@
-header {
-    display: flex;
-    justify-content: center;
-
-   
-}
-h1 {
+body {
     font-family: 'Poppins', sans-serif;
-}
-.sec {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 85vh;
-}
-.area {
-    width: 85%;
-    height: 90%;
-    
-}
-.ask {
-    display: flex;
-    flex-wrap: nowrap;
-}
-.chat {
-    background: white;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    text-align: center;
+    margin: 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: 90%;
-    height: 90%;
-  }
-  
-  input {
-    width: 100%;
+    height: 100vh;
+    background: #f2f2f2;
+}
+
+header {
+    text-align: center;
+    padding: 10px 0;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h1 {
+    margin: 0;
+}
+
+.chat-container {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    /* remove justify-content: flex-end */
+    padding: 30px 50px 60px;
+}
+
+.chat-box {
+    flex: 1;
+    background: white;
+    border-radius: 35px;
+    padding: 20px 25px;
+    min-height: 0;  /* THIS is crucial */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 547px;
+    overflow-y: auto; /* scrollable */
+    margin-bottom: 20px;
+    scroll-behavior: smooth;
+    justify-content: flex-start; /* messages start at top */
+}
+
+/* thin custom scrollbar */
+.chat-box::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 3px;
+}
+
+.input-area {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
     padding: 15px;
+    border-radius: 8px;
     border: 1px solid #ccc;
-    border-radius: 10px;
-    margin-right: 20px;
-    font-family: 'Poppins', sans-serif;
-  }
-  input:focus {
     outline: none;
-    border-color: #ccc; 
+}
+
+input:focus {
+    border-color: #ccc;
     box-shadow: none;
-  }
-  button {
-    padding: 15px 50px;
-    background-color: #000000;
+}
+
+button {
+    padding: 10px 20px;
+    background: #000;
     color: white;
     border: none;
-    border-radius: 10px;
+    border-radius: 8px;
     cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #383838;
-  }
-  
-  #answer {
-    margin-top: 20px;
-    min-height: 40px;
-    text-align: left;
-    font-size: 16px;
-    font-family: 'Poppins', sans-serif;
-    white-space: pre-wrap;
-  }
+}
+
+button:hover {
+    background: #383838;
+}
+
+.message {
+    padding: 10px 15px;
+    border-radius: 12px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.user {
+    align-self: flex-end;
+    background: #000;
+    color: white;
+    border-bottom-right-radius: 0;
+}
+
+.bot {
+    align-self: flex-start;
+    background: #e5e5e5;
+    border-bottom-left-radius: 0;
+}
