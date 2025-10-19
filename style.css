@@ -1,0 +1,71 @@
+header {
+    display: flex;
+    justify-content: center;
+
+   
+}
+h1 {
+    font-family: 'Poppins', sans-serif;
+}
+.sec {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 85vh;
+}
+.area {
+    width: 85%;
+    height: 90%;
+    
+}
+.ask {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.chat {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 90%;
+    height: 90%;
+  }
+  
+  input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-right: 20px;
+    font-family: 'Poppins', sans-serif;
+  }
+  input:focus {
+    outline: none;
+    border-color: #ccc; 
+    box-shadow: none;
+  }
+  button {
+    padding: 15px 50px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #383838;
+  }
+  
+  #answer {
+    margin-top: 20px;
+    min-height: 40px;
+    text-align: left;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    white-space: pre-wrap;
+  }
